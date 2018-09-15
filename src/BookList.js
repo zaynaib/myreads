@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import './books-info.json'
-
 import BookChanger from './BookChanger'
 import './App.css'
 

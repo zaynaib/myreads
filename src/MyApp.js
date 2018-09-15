@@ -3,6 +3,8 @@ import React from 'react'
 import Header from './Header'
 import BookList from './BookList'
 //https://stackoverflow.com/questions/45019420/react-load-all-data-from-json-into-component
+//https://reactjs.org/tutorial/tutorial.html
+//https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822
 //import BookInfo from './books-info.json'
 
 import './App.css'
