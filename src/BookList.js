@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './books-info.json'
-import './BookChanger'
+
+import BookChanger from './BookChanger'
 import './App.css'
 
 function BookList(props){
@@ -12,7 +13,7 @@ function BookList(props){
             <div className = "book">
                 <div className="book-top">
                     <div className ="book-cover" style={{backgroundImage:`url(${book.bookURL})`}}></div>
-                    <div>BookChanger</div>
+                    <BookChanger/>
                 </div>
                 <div class="book-title">{`${book.title}`}</div>
                 <div class="book-authors">{`${book.authors}`}</div>
