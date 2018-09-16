@@ -10,7 +10,7 @@ import './App.css'
 function BookList(props){
     //instead of getting the props from an instance we get it from the argument of the function
     
-    let category = props.categories;
+    let category = props.category;
     let books = props.books;
     console.log(category)
     return(

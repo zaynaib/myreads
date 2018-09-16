@@ -13,7 +13,7 @@ class BookShelf extends React.Component {
        <div className = "bookshelf">
           <h2 className="bookshelf-title">{category}</h2>
           <div className="bookshelf-books">
-            <BookList books={this.props.books} />
+            <BookList category={category} books={this.props.books} />
           </div>
         </div>
 
