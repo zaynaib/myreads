@@ -26,7 +26,7 @@ class BookList extends React.Component{
             <div className = "book">
                 <div className="book-top">
                     <div className ="book-cover" style={{backgroundImage:`url(${book.imageLinks.smallThumbnail})`}}></div>
-                    <BookChanger moveShelf ={this.props.moveShelf} book={book} />
+                    <BookChanger moveShelf ={this.props.moveShelf} book={book} currentShelf={book.shelf} />
                 </div>
                 <div className="book-title">{`${book.title}`}</div>
                 <div className="book-authors">{`${book.authors[0]}`}</div>
