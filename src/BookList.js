@@ -22,7 +22,7 @@ class BookList extends React.Component{
             <div className = "book">
                 <div className="book-top">
                     <div className ="book-cover" style={{backgroundImage:`url(${book.bookURL})`}}></div>
-                    <BookChanger/>
+                    <BookChanger onChange={this.onChange} />
                 </div>
                 <div className="book-title">{`${book.title}`}</div>
                 <div className="book-authors">{`${book.authors}`}</div>

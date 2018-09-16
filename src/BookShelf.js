@@ -14,7 +14,7 @@ class BookShelf extends React.Component {
           <h2 className="bookshelf-title">{category}</h2>
           <div className="bookshelf-books">
           <ol className = 'books-grid'>
-            <BookList category={category} books={this.props.books} />
+            <BookList category={category} onChange={this.onChange} books={this.props.books} />
           </ol>
           </div>
         </div>

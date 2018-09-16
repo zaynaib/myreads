@@ -76,12 +76,22 @@ changeBookShelf = (book) =>{
 }
 */
 
+handleChange = (event) => {
+  this.setState({value: event.target.value});
+}
+
+handleSubmit =(event)=> {
+  alert('Your favorite flavor is: ' + this.state.value);
+  event.preventDefault();
+}
+
+
 
   render() {
     return (
       <div className="list-books">
         <Header/>
-        <BookShelf categories={this.state.categories}  books ={this.state.books}/>
+        <BookShelf onChange ={this.handleChange} categories={this.state.categories}  books ={this.state.books}/>
       </div>
     );
   }
