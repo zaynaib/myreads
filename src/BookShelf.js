@@ -10,7 +10,7 @@ class BookShelf extends React.Component {
       <div>
       {this.props.categories.map((category) =>
 
-       <div className = "bookshelf">
+       <div key={category} className = "bookshelf">
           <h2 className="bookshelf-title">{category}</h2>
           <div className="bookshelf-books">
             <BookList category={category} books={this.props.books} />
