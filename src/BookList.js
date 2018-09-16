@@ -7,33 +7,6 @@ import './App.css'
 //https://react-cn.github.io/react/tips/if-else-in-JSX.html
 //https://blog.logrocket.com/conditional-rendering-in-react-c6b0e5af381e
 
-/*
-class BookList extends React.Component{
-    render(){
-        return(
-            <ol className = 'books-grid'>
-            {this.props.books.map((book)=> (
-                
-            <li key={book.name}>
-                <div className = "book">
-                    <div className="book-top">
-                        <div className ="book-cover" style={{backgroundImage:`url(${book.bookURL})`}}></div>
-                        <BookChanger/>
-                    </div>
-                    <div className="book-title">{`${book.title}`}</div>
-                    <div className="book-authors">{`${book.authors}`}</div>
-    
-                </div>
-            </li>
-                
-            ))}
-    
-            </ol>
-        )
-
-    }
-}
-*/
 
 
 function BookList(props){
