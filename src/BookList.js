@@ -15,7 +15,6 @@ function BookList(props){
     let category = props.category;
     let mybooks = props.books;
     //console.log(mybooks[0])
-    //const map1 = array1.map(x => x * 2);
     return(
     mybooks.map(book => {
         //console.log(book.bookShelf ===category)
