@@ -6,8 +6,8 @@ import './App.css'
 class BookSearch extends React.Component {
     render() {
       return (
-        <div className="book-shelf-changer">
-        
+        <div className="open-search">
+              <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
         </div>
       );
     }

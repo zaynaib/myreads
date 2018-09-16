@@ -1,7 +1,6 @@
 import React from 'react'
 import * as BooksAPI from './BooksAPI'
 import Header from './Header'
-import BookList from './BookList'
 import BookShelf from './BookShelf'
 
 //https://stackoverflow.com/questions/45019420/react-load-all-data-from-json-into-component
@@ -10,6 +9,7 @@ import BookShelf from './BookShelf'
 //import BookInfo from './books-info.json'
 
 import './App.css'
+import BookSearch from './BookSearch';
 
 class BooksApp extends React.Component {
   state ={
@@ -45,6 +45,7 @@ moveShelf  = (book,shelf) =>{
          books ={this.state.books}
          moveShelf ={this.moveShelf}
          />
+         <BookSearch/>
       </div>
     );
   }
