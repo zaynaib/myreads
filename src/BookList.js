@@ -16,7 +16,7 @@ class BookList extends React.Component{
     let mybooks = this.props.books;
     console.log('book list items')
     //console.log(mybooks)
-    console.log(mybooks[0])
+    //console.log(mybooks[0])
     
     return(
     

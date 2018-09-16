@@ -17,6 +17,8 @@ class SearchPage extends React.Component{
     this.updateSearchedBooks(query);
   }
 
+  
+
   updateSearchedBooks = (query) =>{
     if(query){
       BooksAPI.search(query).then((searchedBooks)=>{
@@ -46,7 +48,7 @@ class SearchPage extends React.Component{
               <ol className="books-grid">
               {this.state.searchedBooks.map(searchedBook => (
                 <li key={searchedBook.id}>
-                  <BookList books ={searchedBook}/>
+                  <BookList mybooks ={searchedBook}/>
 
                 </li>
               ))}
