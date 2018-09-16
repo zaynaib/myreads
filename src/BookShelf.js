@@ -13,7 +13,9 @@ class BookShelf extends React.Component {
        <div key={category} className = "bookshelf">
           <h2 className="bookshelf-title">{category}</h2>
           <div className="bookshelf-books">
+          <ol className = 'books-grid'>
             <BookList category={category} books={this.props.books} />
+          </ol>
           </div>
         </div>
 

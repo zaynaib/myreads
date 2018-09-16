@@ -9,17 +9,16 @@ import './App.css'
 
 
 
-function BookList(props){
+class BookList extends React.Component{
     //instead of getting the props from an instance we get it from the argument of the function
-    
-    let category = props.category;
-    let mybooks = props.books;
-    //console.log(mybooks[0])
+    render(){
+    let category =this.props.category;
+    let mybooks = this.props.books;
     return(
-    mybooks.map(book => {
-        //console.log(book.bookShelf ===category)
+     
+    mybooks.map(book =>  { 
         if(book.bookShelf === category){
-            <li key={book.name}>
+            return(<li key={book.name}>
             <div className = "book">
                 <div className="book-top">
                     <div className ="book-cover" style={{backgroundImage:`url(${book.bookURL})`}}></div>
@@ -29,38 +28,13 @@ function BookList(props){
                 <div className="book-authors">{`${book.authors}`}</div>
 
             </div>
-        </li>
+        </li>)
 
         }
-    })
-    )
-    
-    
-/*
-    return(
-    
+        })//end of map
+    )//end of render
 
-        <ol className = 'books-grid'>
-        
-        {props.books.map((book)=> (
-            
-        <li key={book.name}>
-            <div className = "book">
-                <div className="book-top">
-                    <div className ="book-cover" style={{backgroundImage:`url(${book.bookURL})`}}></div>
-                    <BookChanger/>
-                </div>
-                <div className="book-title">{`${book.title}`}</div>
-                <div className="book-authors">{`${book.authors}`}</div>
-
-            </div>
-        </li>
-            
-        ))}
-
-        </ol>
-    )
-*/
+    }
 }
 
 export default BookList
