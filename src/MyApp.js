@@ -63,7 +63,7 @@ class BooksApp extends React.Component {
 }
   render() {
     return (
-      <div class="list-books">
+      <div className="list-books">
         <Header/>
         <BookShelf categories={this.state.categories}  books ={this.state.books}/>
       </div>
