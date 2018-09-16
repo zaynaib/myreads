@@ -28,6 +28,11 @@ moveShelf  = (book,shelf) =>{
   //update the shelf property of the book
   BooksAPI.update(book,shelf);
 
+  //have to update the state of the book array
+  BooksAPI.getAll().then((books) =>{
+    this.setState({books:books})
+    })
+
 }
 
 
