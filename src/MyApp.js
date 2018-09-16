@@ -2,6 +2,8 @@ import React from 'react'
 // import * as BooksAPI from './BooksAPI'
 import Header from './Header'
 import BookList from './BookList'
+import BookShelf from './BookShelf'
+
 //https://stackoverflow.com/questions/45019420/react-load-all-data-from-json-into-component
 //https://reactjs.org/tutorial/tutorial.html
 //https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822
@@ -13,6 +15,7 @@ class BooksApp extends React.Component {
   state ={
     //piece of state to render UI it should live inside of a component
     //react should take care of the state of the data
+    categories:["Currently Reading","Want To Read","Read"],
     books:[
       {
         "title": "To Kill a Mockingbird",
@@ -60,9 +63,9 @@ class BooksApp extends React.Component {
 }
   render() {
     return (
-      <div>
-      <Header/>
-      <BookList  books ={this.state.books}/>
+      <div class="list-books">
+        <Header/>
+        <BookShelf  books ={this.state.books}/>
       </div>
     );
   }
