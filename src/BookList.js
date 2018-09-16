@@ -22,11 +22,11 @@ class BookList extends React.Component{
     
     mybooks.map(book =>  { 
         if(book.shelf === category){
-            return(<li key={book.title}>
+            return(<li key={book.id}>
             <div className = "book">
                 <div className="book-top">
                     <div className ="book-cover" style={{backgroundImage:`url(${book.imageLinks.smallThumbnail})`}}></div>
-                    <BookChanger moveShelf ={this.props.moveShelf} book={this.props.book} />
+                    <BookChanger moveShelf ={this.props.moveShelf} book={book} />
                 </div>
                 <div className="book-title">{`${book.title}`}</div>
                 <div className="book-authors">{`${book.authors[0]}`}</div>

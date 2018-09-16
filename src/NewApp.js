@@ -25,6 +25,7 @@ componentDidMount(){
 }
 
 moveShelf  = (book,shelf) =>{
+  //update the shelf property of the book
   BooksAPI.update(book,shelf);
 
 }
