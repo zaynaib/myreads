@@ -7,13 +7,18 @@ import './App.css'
 class BookShelf extends React.Component {
   render() {
     return (
-      <div className = "bookshelf">
-       <h2 className="bookshelf-title">Title</h2>
-        <div className="bookshelf-books">
-          <BookList books={this.props.books} />
-          
+      <div>
+      {this.props.categories.map((category) =>
+
+       <div className = "bookshelf">
+          <h2 className="bookshelf-title">{category}</h2>
+          <div className="bookshelf-books">
+            <BookList books={this.props.books} />
+          </div>
         </div>
 
+
+      )}
       </div>
     );
   }
