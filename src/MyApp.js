@@ -15,7 +15,6 @@ class BooksApp extends React.Component {
   state ={
     //piece of state to render UI it should live inside of a component
     //react should take care of the state of the data
-    value:'',
     categories:["Currently Reading","Want To Read","Read"],
     books:[
       {
@@ -76,22 +75,12 @@ changeBookShelf = (book) =>{
 }
 */
 
-handleChange = (event) => {
-  this.setState({value: event.target.value});
-}
-
-handleSubmit =(event)=> {
-  alert('Your favorite flavor is: ' + this.state.value);
-  event.preventDefault();
-}
-
-
 
   render() {
     return (
       <div className="list-books">
         <Header/>
-        <BookShelf onChange ={this.handleChange} categories={this.state.categories}  books ={this.state.books}/>
+        <BookShelf  categories={this.state.categories}  books ={this.state.books}/>
       </div>
     );
   }

@@ -5,6 +5,7 @@ import './App.css'
 
 
 class BookShelf extends React.Component {
+
   render() {
     return (
       <div>
@@ -14,7 +15,7 @@ class BookShelf extends React.Component {
           <h2 className="bookshelf-title">{category}</h2>
           <div className="bookshelf-books">
           <ol className = 'books-grid'>
-            <BookList category={category} onChange={this.onChange} books={this.props.books} />
+            <BookList category={category}   books={this.props.books} moveShelf ={this.props.moveShelf}/>
           </ol>
           </div>
         </div>
