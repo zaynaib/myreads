@@ -3,6 +3,10 @@ import * as BooksAPI from './BooksAPI'
 import Header from './Header'
 import BookShelf from './BookShelf'
 import SearchPage from './SearchPage'
+import {Link} from 'react-router-dom'
+import {Route} from 'react-router-dom'
+
+
 
 //https://stackoverflow.com/questions/45019420/react-load-all-data-from-json-into-component
 //https://reactjs.org/tutorial/tutorial.html
@@ -41,6 +45,7 @@ moveShelf  = (book,shelf) =>{
   render() {
     return (
       <div className="list-books">
+     
         
         <Header/>
         <BookShelf 

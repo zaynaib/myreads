@@ -1,8 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
-import MyApp from  './MyApp'
 import NewApp from './NewApp'
+import {BrowserRouter} from 'react-router-dom'
 import './index.css'
 
-ReactDOM.render(<NewApp />, document.getElementById('root'))
+ReactDOM.render(<BrowserRouter><NewApp /></BrowserRouter>, document.getElementById('root'))
