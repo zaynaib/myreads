@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 //import { Route } from 'react-router-dom'
 import BookList from './BookList'
 import './App.css'
+import PropTypes from 'prop-types';
+
 
 
 class BookShelf extends React.Component {
@@ -27,5 +29,8 @@ class BookShelf extends React.Component {
   }
 }
 
+BookShelf.propTypes = {
+  books: PropTypes.array.isRequried
+};
 export default BookShelf
 

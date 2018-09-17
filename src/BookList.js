@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import './books-info.json'
 import BookChanger from './BookChanger'
 import './App.css'
+import PropTypes from 'prop-types';
+
 
 //https://reactjs.org/docs/conditional-rendering.html ***
 //https://react-cn.github.io/react/tips/if-else-in-JSX.html
@@ -29,7 +30,7 @@ class BookList extends React.Component{
                     <BookChanger moveShelf ={this.props.moveShelf} book={book}/>
                 </div>
                 <div className="book-title">{`${book.title}`}</div>
-                <div className="book-authors">{`${book.authors[0]}`}</div>
+                <div className="book-authors">{`${book.authors}`}</div>
 
             </div>
         </li>)
@@ -45,6 +46,10 @@ class BookList extends React.Component{
 
     }
 }
+
+BookList.propTypes = {
+    books: PropTypes.array.isRequried
+  };
 
 export default BookList
 

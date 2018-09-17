@@ -2,13 +2,26 @@ import React, { Component } from 'react';
 //import { Route } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import BookList from './BookList'
+import BookShelf from './BookShelf'
 import './App.css'
 
 class SearchPage extends React.Component{
   state = {
+    categories:["currentlyReading","wantToRead","read"],
     query:'',
     searchedBooks:[]
   }
+  
+moveShelf  = (book,shelf) =>{
+  //update the shelf property of the book
+  BooksAPI.update(book,shelf);
+
+  //have to update the state of the book array
+  BooksAPI.getAll().then((books) =>{
+    this.setState({books:books})
+    })
+
+}
 
   updateQuery = (query) =>{
     this.setState({
@@ -17,7 +30,7 @@ class SearchPage extends React.Component{
     this.updateSearchedBooks(query);
   }
 
-  
+
 
   updateSearchedBooks = (query) =>{
     if(query){
@@ -32,7 +45,8 @@ class SearchPage extends React.Component{
     
   }
   render(){
- 
+    console.log(this.state.searchedBooks)
+
     return(
       <div className="search-books">
             <div className="search-books-bar">
@@ -46,12 +60,7 @@ class SearchPage extends React.Component{
             </div>
             <div className="search-books-results">
               <ol className="books-grid">
-              {this.state.searchedBooks.map(searchedBook => (
-                <li key={searchedBook.id}>
-                  <BookList mybooks ={searchedBook}/>
-
-                </li>
-              ))}
+              <BookList books={this.state.searchedBooks} />
               
               </ol>
             </div>

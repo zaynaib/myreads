@@ -41,13 +41,13 @@ moveShelf  = (book,shelf) =>{
   render() {
     return (
       <div className="list-books">
-        {/*
+        
         <Header/>
         <BookShelf 
         categories={this.state.categories} 
          books ={this.state.books}
          moveShelf ={this.moveShelf}
-      />   */}
+      />   
          <BookSearch/>
          
          <SearchPage/>
