@@ -17,7 +17,7 @@ class BookList extends React.Component{
     let mybooks = this.props.books;
     console.log('book list items')
     //console.log(mybooks)
-    //console.log(mybooks[0])
+    console.log(mybooks[0])
     
     return(
     
@@ -26,7 +26,11 @@ class BookList extends React.Component{
             return(<li key={book.id}>
             <div className = "book">
                 <div className="book-top">
-                    <div className ="book-cover" style={{backgroundImage:`url(${book.imageLinks.smallThumbnail})`}}></div>
+                    <div className ="book-cover" style={{backgroundImage:
+                        `url(${ book.imageLinks ? book.imageLinks.smallThumbnail:''})`}}>
+                        
+                        
+                        </div>
                     <BookChanger moveShelf ={this.props.moveShelf} book={book}/>
                 </div>
                 <div className="book-title">{`${book.title}`}</div>
@@ -38,6 +42,9 @@ class BookList extends React.Component{
         }
 
         else{
+            return(
+                <div></div>
+            )
              
           
         }
