@@ -6,6 +6,8 @@ import SearchPage from './SearchPage'
 import {Link} from 'react-router-dom'
 import {Route} from 'react-router-dom'
 
+//2:20
+
 
 
 //https://stackoverflow.com/questions/45019420/react-load-all-data-from-json-into-component
@@ -43,6 +45,29 @@ moveShelf  = (book,shelf) =>{
 
 
   render() {
+    return(
+      <div className ="app">
+      <Route exact path="/" render={() =>(
+        <div className="list-books">
+                <Header/>
+                <BookShelf 
+        categories={this.state.categories} 
+         books ={this.state.books}
+         moveShelf ={this.moveShelf}
+      />   
+               <BookSearch/>
+
+      </div>
+
+      )}/>
+
+      <Route exact pat="/search" render={() =>(
+                 <SearchPage moveShelf={this.moveShelf}/>
+
+      )}/>
+      </div>
+    )
+    /*
     return (
       <div className="list-books">
      
@@ -59,7 +84,8 @@ moveShelf  = (book,shelf) =>{
          <SearchPage moveShelf={this.moveShelf}/>
       </div>
     );
-  }
+  }*/
+}
 }
 
 
