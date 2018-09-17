@@ -12,16 +12,7 @@ class SearchPage extends React.Component{
     searchedBooks:[]
   }
   
-moveShelf  = (book,shelf) =>{
-  //update the shelf property of the book
-  BooksAPI.update(book,shelf);
 
-  //have to update the state of the book array
-  BooksAPI.getAll().then((books) =>{
-    this.setState({books:books})
-    })
-
-}
 
   updateQuery = (query) =>{
     this.setState({
@@ -61,7 +52,7 @@ moveShelf  = (book,shelf) =>{
             </div>
             <div className="search-books-results">
               <ol className="books-grid">
-              <BookList books={this.state.searchedBooks} />
+              <BookList books={this.state.searchedBooks} moveShelf ={this.props.moveShelf} />
               
               </ol>
             </div>
