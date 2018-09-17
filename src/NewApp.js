@@ -67,24 +67,7 @@ moveShelf  = (book,shelf) =>{
       )}/>
       </div>
     )
-    /*
-    return (
-      <div className="list-books">
-     
-        
-        <Header/>
-        <BookShelf 
-        categories={this.state.categories} 
-         books ={this.state.books}
-         moveShelf ={this.moveShelf}
-      />   
-      
-         <BookSearch/>
-         
-         <SearchPage moveShelf={this.moveShelf}/>
-      </div>
-    );
-  }*/
+  
 }
 }
 
