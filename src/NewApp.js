@@ -29,9 +29,8 @@ class BooksApp extends React.Component {
       { title:"Want To Read",
         cat:"wantToRead"}
       ,{title:"Read",
-        cat:"read"},
-        {
-        cat:"none"}],
+        cat:"read"}
+      ],
     books:[]
 }
 

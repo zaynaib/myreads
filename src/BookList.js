@@ -21,15 +21,29 @@ class BookList extends React.Component{
   
     return(
     
-    mybooks.map(book =>  { 
+    mybooks.map((book,index) =>  { 
         if(book.shelf ===undefined){
             book.shelf = 'none'
-            if(book.shelf === category){
-                console.log('true')
-            }
+            return(<li key={book.id}>
+                <div className = "book">
+                    <div className="book-top">
+                        <div className ="book-cover" style={{backgroundImage:
+                            `url(${ book.imageLinks ? book.imageLinks.smallThumbnail:''})`}}>
+                            
+                            
+                            </div>
+                        <BookChanger moveShelf ={this.props.moveShelf} book={book}/>
+                    </div>
+                    <div className="book-title">{`${book.title}`}</div>
+                    <div className="book-authors">{`${book.authors}`}</div>
+    
+                </div>
+            </li>)
+            
         }
+       
 
-        if(book.shelf === category){
+        else if(book.shelf === category){
             return(<li key={book.id}>
             <div className = "book">
                 <div className="book-top">
