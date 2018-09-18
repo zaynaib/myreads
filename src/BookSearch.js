@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 //import { Route } from 'react-router-dom'
 import {Link} from 'react-router-dom'
-import {Route} from 'react-router-dom'
 
 import './App.css'
 

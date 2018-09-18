@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-//import { Route } from 'react-router-dom'
+import React from 'react';
 import BookList from './BookList'
 import './App.css'
 import PropTypes from 'prop-types';

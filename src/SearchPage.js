@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 //import { Route } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import BookList from './BookList'
-import BookShelf from './BookShelf'
 import {Link} from 'react-router-dom'
-import {Route} from 'react-router-dom'
 
 import './App.css'
 
@@ -38,9 +36,7 @@ class SearchPage extends React.Component{
         }else{
         //if book is found the return book
         this.setState({searchedBooks:searchedBooks})
-        this.setState(searchedBooks.map(book =>{book.shelf='none'}))
-
-        //this.setState((searchedBooks.map(book => book.shelf='none')))
+        //this.setState(searchedBooks.map(book =>{book.shelf='none'}))
 
     
         }
