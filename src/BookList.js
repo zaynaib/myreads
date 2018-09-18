@@ -13,8 +13,8 @@ import PropTypes from 'prop-types';
 class BookList extends React.Component{
     //instead of getting the props from an instance we get it from the argument of the function
     render(){
-    let category =this.props.category;
-    let mybooks = this.props.books;
+    const category =this.props.category;
+    const mybooks = this.props.books;
     console.log('book list items')
     //console.log(mybooks)
     console.log(mybooks[0])
@@ -24,26 +24,11 @@ class BookList extends React.Component{
     mybooks.map((book,index) =>  { 
         if(book.shelf ===undefined){
             book.shelf = 'none'
-            return(<li key={book.id}>
-                <div className = "book">
-                    <div className="book-top">
-                        <div className ="book-cover" style={{backgroundImage:
-                            `url(${ book.imageLinks ? book.imageLinks.smallThumbnail:''})`}}>
-                            
-                            
-                            </div>
-                        <BookChanger moveShelf ={this.props.moveShelf} book={book}/>
-                    </div>
-                    <div className="book-title">{`${book.title}`}</div>
-                    <div className="book-authors">{`${book.authors}`}</div>
-    
-                </div>
-            </li>)
             
         }
-       
+     
 
-        else if(book.shelf === category){
+         if(book.shelf === category){
             return(<li key={book.id}>
             <div className = "book">
                 <div className="book-top">

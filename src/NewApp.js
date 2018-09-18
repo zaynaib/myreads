@@ -61,19 +61,19 @@ moveShelf  = (book,shelf) =>{
       <div className ="app">
       <Route exact path="/" render={() =>(
         <div className="list-books">
-                <Header/>
-                <BookShelf 
+          <Header/>
+           <BookShelf 
         categories={this.state.categories} 
          books ={this.state.books}
          moveShelf ={this.moveShelf}
       />   
-               <BookSearch/>
+         <BookSearch/>
 
       </div>
 
       )}/>
 
-      <Route exact pat="/search" render={() =>(
+      <Route exact path="/search" render={() =>(
                  <SearchPage moveShelf={this.moveShelf}/>
 
       )}/>
