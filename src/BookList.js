@@ -22,10 +22,6 @@ class BookList extends React.Component{
     return(
     
     mybooks.map((book,index) =>  { 
-        if(book.shelf ===undefined){
-            book.shelf = 'none'
-            
-        }
      
 
          if(book.shelf === category){
