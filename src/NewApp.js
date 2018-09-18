@@ -23,23 +23,36 @@ class BooksApp extends React.Component {
   state ={
     //piece of state to render UI it should live inside of a component
     //react should take care of the state of the data
-    categories:["currentlyReading","wantToRead","read"],
+    categories:[
+      { title:"Currently Reading",
+        cat:"currentlyReading"},
+      { title:"Want To Read",
+        cat:"wantToRead"}
+      ,{title:"Read",
+        cat:"read"},
+        {
+        cat:"none"}],
     books:[]
 }
+
+
+
 componentDidMount(){
   BooksAPI.getAll().then((books) =>{
   this.setState({books:books})
   })
 }
 
+//BooksAPI.update(book,shelfName).then(() => {this.setState({books: newBooks});});
+
+
 moveShelf  = (book,shelf) =>{
   //update the shelf property of the book
-  BooksAPI.update(book,shelf);
+  BooksAPI.update(book,shelf).then(() => {
+    BooksAPI.getAll().then((books) =>{this.setState({books:books})})
+  })
 
-  //have to update the state of the book array
-  BooksAPI.getAll().then((books) =>{
-    this.setState({books:books})
-    })
+
 
 }
 

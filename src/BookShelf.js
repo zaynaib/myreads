@@ -13,11 +13,11 @@ class BookShelf extends React.Component {
       <div>
       {this.props.categories.map((category) =>
 
-       <div key={category} className = "bookshelf">
-          <h2 className="bookshelf-title">{category}</h2>
+       <div key={category.cat} className = "bookshelf">
+          <h2 className="bookshelf-title">{category.title}</h2>
           <div className="bookshelf-books">
           <ol className = 'books-grid'>
-            <BookList category={category}   books={this.props.books} moveShelf ={this.props.moveShelf}/>
+            <BookList category={category.cat}   books={this.props.books} moveShelf ={this.props.moveShelf}/>
           </ol>
           </div>
         </div>

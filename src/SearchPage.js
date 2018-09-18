@@ -25,22 +25,29 @@ class SearchPage extends React.Component{
   }
 
   updateSearchedBooks = (query) =>{
+    //if someone preforms a query
     if(query){
       BooksAPI.search(query).then((searchedBooks)=>{
+        //if a book cannot be found return empty array
         if(searchedBooks.error){
           this.setState({searchedBooks:[]})
         }else{
+        //if book is found the return book
         this.setState({searchedBooks:searchedBooks})
         }
       })
     }
+    //if there is not query in the search bar then give an empty array
     else{
       this.setState({searchedBooks:[]})
     }
     
   }
   render(){
+    //console.log(this.state.searchedBooks.shelf = "none")
+    //this.state.searchedBooks.map(searchedBook => { searchedBook.shelf='none'})
     console.log(this.state.searchedBooks)
+
 
     return(
       <div className="search-books">
