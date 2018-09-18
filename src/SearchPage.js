@@ -8,7 +8,6 @@ import './App.css'
 
 class SearchPage extends React.Component{
   state = {
-    categories:["currentlyReading","wantToRead","read"],
     query:'',
     searchedBooks:[]
   }
