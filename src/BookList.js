@@ -18,7 +18,12 @@ class BookList extends React.Component{
     console.log('book list items')
     //console.log(mybooks)
     console.log(mybooks[0])
-    
+    if(mybooks === undefined || mybooks===[]){
+        return(
+            <h1>No Books found!</h1>
+        )
+    }
+    else{
     return(
     
     mybooks.map(book =>  { 
@@ -49,7 +54,8 @@ class BookList extends React.Component{
           
         }
         })//end of map
-    )//end of render
+        
+    )}//end of render
 
     }
 }
