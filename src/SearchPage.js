@@ -22,8 +22,6 @@ class SearchPage extends React.Component{
     this.updateSearchedBooks(query);
   }
 
-  
-
 
   updateSearchedBooks = (query) =>{
     //if someone preforms a query
@@ -36,8 +34,6 @@ class SearchPage extends React.Component{
         //if book is found the return book
         this.setState({searchedBooks:searchedBooks})
         //this.setState(searchedBooks.map(book =>{book.shelf='none'}))
-
-    
         }
       })
     }
